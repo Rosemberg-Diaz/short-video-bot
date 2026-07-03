@@ -38,7 +38,10 @@ function readChannelEnv(
   name: string,
 ): string | undefined {
   const channelValue = process.env[`${CHANNEL_ENV_PREFIX[channel]}_${name}`];
-  return channelValue || process.env[`YOUTUBE_${name}`];
+  if (channel === "horror") {
+    return channelValue || process.env[`YOUTUBE_${name}`];
+  }
+  return channelValue;
 }
 
 export function getYouTubeConfig(channel: YouTubeChannelKey = "horror"): YouTubeConfig {
