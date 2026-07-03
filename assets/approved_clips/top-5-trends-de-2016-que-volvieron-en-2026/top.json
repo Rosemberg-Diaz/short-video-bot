@@ -1,0 +1,60 @@
+{
+  "title": "Top 5 trends de 2016 que volvieron en 2026",
+  "slug": "top-5-trends-de-2016-que-volvieron-en-2026",
+  "description": "Top 5 de trends de 2016 que volvieron en 2026 por la ola nostalgia: recreaciones, challenges y estética old internet.",
+  "voiceoverStyle": "Narrador nostalgico y rapido. El chiste es comparar 'esto era 2016' con 'y ahora volvio'.",
+  "hashtags": [
+    "#Shorts",
+    "#Top5",
+    "#Viral",
+    "#2016",
+    "#Nostalgia"
+  ],
+  "clips": [
+    {
+      "rank": 5,
+      "file": "clip-5.mp4",
+      "title": "Bottle flip otra vez",
+      "creator": "@creator",
+      "sourceUrl": "Buscar: 2026 bottle flip challenge / bottle flip comeback short",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    },
+    {
+      "rank": 4,
+      "file": "clip-4.mp4",
+      "title": "Mannequin challenge regreso",
+      "creator": "@creator",
+      "sourceUrl": "Buscar: 2026 mannequin challenge / mannequin challenge comeback",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    },
+    {
+      "rank": 3,
+      "file": "clip-3.mp4",
+      "title": "Filtros estilo Snapchat",
+      "creator": "@creator",
+      "sourceUrl": "Buscar: 2026 is the new 2016 Snapchat filter / dog filter nostalgia",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    },
+    {
+      "rank": 2,
+      "file": "clip-2.mp4",
+      "title": "El dab no murio",
+      "creator": "@creator",
+      "sourceUrl": "Buscar: 2016 dance comeback 2026 / dabbing trend 2026",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    },
+    {
+      "rank": 1,
+      "file": "clip-1.mp4",
+      "title": "Pokemon Go vibes",
+      "creator": "@creator",
+      "sourceUrl": "Buscar: Pokemon Go nostalgia 2026 / 2026 is the new 2016 Pokemon Go",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    }
+  ]
+}

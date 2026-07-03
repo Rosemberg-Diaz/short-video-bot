@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Series {
+  id          Int       @id @default(autoincrement())
+  name        String    @unique
+  description String
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  episodes    Episode[]
+}
+
+model Episode {
+  id                      Int      @id @default(autoincrement())
+  seriesId                Int
+  title                   String   @unique
+  hook                    String   @unique
+  storyBody               String
+  twistEnding             String   @unique
+  storyFormula            String
+  estimatedViralityScore  Float
+  status                  String   @default("GENERATED")
+  description             String
+  hashtags                String
+  estimatedDurationSeconds Float
+  videoPath                String?
+  audioPath                String?
+  subtitlePath             String?
+  renderStatus             String   @default("PENDING")
+  renderError              String?
+  youtubeVideoId           String?
+  youtubeUrl               String?
+  youtubeUploadStatus      String   @default("PENDING")
+  youtubeUploadError       String?
+  youtubePrivacyStatus     String?
+  uploadedAt               DateTime?
+  localAssetsCleanedAt      DateTime?
+  localCleanupError         String?
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+  series                   Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  scenes                   Scene[]
+
+  @@index([seriesId])
+  @@index([storyFormula])
+  @@index([status])
+  @@index([renderStatus])
+  @@index([youtubeUploadStatus])
+}
+
+model Scene {
+  id              Int      @id @default(autoincrement())
+  episodeId       Int
+  sceneNumber     Int
+  narration       String
+  imagePrompt     String
+  durationSeconds Float
+  imagePath       String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  episode         Episode  @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+
+  @@unique([episodeId, sceneNumber])
+  @@index([episodeId])
+}

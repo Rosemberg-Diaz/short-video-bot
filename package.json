@@ -1,0 +1,45 @@
+{
+  "name": "ai-horror-shorts-factory",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Motor narrativo para generar series y episodios cortos de terror tecnológico.",
+  "scripts": {
+    "build": "tsc",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "tsx src/database/seed.ts",
+    "db:setup": "prisma generate && prisma db push && tsx src/database/seed.ts",
+    "generate:episode": "prisma db push && tsx src/episode-generator/generate-episode.command.ts",
+    "generate:batch-episodes": "prisma db push && tsx src/episode-generator/generate-batch.command.ts",
+    "build:short": "prisma db push && tsx src/video-builder/build-short.command.ts",
+    "generate:full": "prisma db push && tsx src/video-builder/generate-full.command.ts",
+    "youtube:auth": "tsx src/youtube-uploader/youtube-auth.command.ts",
+    "youtube:upload": "prisma db push && tsx src/youtube-uploader/upload-youtube.command.ts",
+    "youtube:privacy": "tsx src/youtube-uploader/update-youtube-privacy.command.ts",
+    "generate:publish": "prisma db push && tsx src/youtube-uploader/generate-publish.command.ts",
+    "trend:scout": "tsx src/trend-scouting/generate-trend-scout.command.ts",
+    "tops:init": "tsx src/top-video/init-top.command.ts",
+    "tops:build": "tsx src/top-video/build-top.command.ts",
+    "media:audit": "tsx src/video-builder/audit-pipeline.command.ts",
+    "media:check": "tsx src/video-builder/check-media-dependencies.command.ts",
+    "media:start": "tools\\start-stable-diffusion.bat",
+    "quality:audit": "tsx src/episode-generator/audit-episodes.command.ts",
+    "quality:stories": "tsx src/story-generator/audit-story-engine.command.ts",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "prisma generate"
+  },
+  "prisma": {
+    "seed": "tsx src/database/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.0",
+    "dotenv": "17.2.3",
+    "googleapis": "^173.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "prisma": "6.19.0",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}

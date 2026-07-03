@@ -1,0 +1,58 @@
+{
+  "title": "Top 5 fails inesperados",
+  "slug": "top-5-fails-inesperados",
+  "description": "Top 5 armado con clips revisados manualmente.",
+  "voiceoverStyle": "Narrador rapido, curioso y con remates cortos.",
+  "hashtags": [
+    "#Shorts",
+    "#Top5",
+    "#Viral"
+  ],
+  "clips": [
+    {
+      "rank": 5,
+      "file": "clip-5.mp4",
+      "title": "Momento 5",
+      "creator": "@creator",
+      "sourceUrl": "https://...",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    },
+    {
+      "rank": 4,
+      "file": "clip-4.mp4",
+      "title": "Momento 4",
+      "creator": "@creator",
+      "sourceUrl": "https://...",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    },
+    {
+      "rank": 3,
+      "file": "clip-3.mp4",
+      "title": "Momento 3",
+      "creator": "@creator",
+      "sourceUrl": "https://...",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    },
+    {
+      "rank": 2,
+      "file": "clip-2.mp4",
+      "title": "Momento 2",
+      "creator": "@creator",
+      "sourceUrl": "https://...",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    },
+    {
+      "rank": 1,
+      "file": "clip-1.mp4",
+      "title": "Momento 1",
+      "creator": "@creator",
+      "sourceUrl": "https://...",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    }
+  ]
+}
