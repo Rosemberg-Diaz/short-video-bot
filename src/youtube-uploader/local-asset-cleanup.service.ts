@@ -18,6 +18,7 @@ export class LocalAssetCleanupService {
         deleted.push(filePath);
       }
 
+      await this.removeTopVoiceoverDirectoryIfSafe(episode.videoPath);
       await this.removeSceneDirectoriesIfEmpty(episode.id);
 
       await prisma.episode.update({
@@ -47,6 +48,7 @@ export class LocalAssetCleanupService {
       (await prisma.scene.findMany({ where: { episodeId: episode.id } }));
     const rawPaths = [
       episode.videoPath,
+      ...this.collectVideoSidecarPaths(episode.videoPath),
       episode.audioPath,
       episode.subtitlePath,
       episode.subtitlePath?.replace(/\.srt$/iu, ".txt"),
@@ -74,6 +76,31 @@ export class LocalAssetCleanupService {
     } catch {
       // Si no existe o no esta vacio, no pasa nada.
     }
+  }
+
+  private collectVideoSidecarPaths(videoPath?: string | null): string[] {
+    if (!videoPath) return [];
+    const parsed = path.parse(videoPath);
+    const stem = path.join(parsed.dir, parsed.name);
+
+    return [
+      `${stem}.metadata.json`,
+      `${stem}-preview.jpg`,
+      `${stem}-preview-style.jpg`,
+      `${stem}-preview-style-15.jpg`,
+      `${stem}-voice-test.mp4`,
+    ];
+  }
+
+  private async removeTopVoiceoverDirectoryIfSafe(
+    videoPath?: string | null,
+  ): Promise<void> {
+    if (!videoPath) return;
+    const videoName = path.parse(videoPath).name;
+    const voiceoverDirectory = path.resolve("output", "tops", `voiceover-${videoName}`);
+    if (!this.isInsideOutput(voiceoverDirectory)) return;
+
+    await fs.rm(voiceoverDirectory, { force: true, recursive: true });
   }
 
   private isInsideOutput(resolvedPath: string): boolean {

@@ -12,6 +12,8 @@ output/subtitles/*
 output/videos/*
 output/tops/*
 output/youtube/*
+output/reference-top-style/
+output/tiktok-review-demo/
 !output/images/.gitkeep
 !output/audio/.gitkeep
 !output/subtitles/.gitkeep

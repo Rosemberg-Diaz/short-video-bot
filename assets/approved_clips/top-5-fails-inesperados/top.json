@@ -1,7 +1,7 @@
 {
   "title": "Top 5 fails inesperados",
   "slug": "top-5-fails-inesperados",
-  "description": "Top 5 armado con clips revisados manualmente.",
+  "description": "Top 5 fails inesperados armado con clips revisados manualmente.",
   "voiceoverStyle": "Narrador rapido, curioso y con remates cortos.",
   "hashtags": [
     "#Shorts",
@@ -11,48 +11,48 @@
   "clips": [
     {
       "rank": 5,
-      "file": "clip-5.mp4",
-      "title": "Momento 5",
-      "creator": "@creator",
-      "sourceUrl": "https://...",
+      "file": "clip5.mp4",
+      "title": "No pudo hacerlo",
+      "creator": "AFV",
+      "sourceUrl": "https://www.youtube.com/shorts/s0e24Oak93o",
       "startSeconds": 0,
-      "durationSeconds": 6
+      "durationSeconds": 9.2
     },
     {
       "rank": 4,
-      "file": "clip-4.mp4",
-      "title": "Momento 4",
-      "creator": "@creator",
-      "sourceUrl": "https://...",
+      "file": "clip4.mp4",
+      "title": "Me mareo de verlo",
+      "creator": "AFV",
+      "sourceUrl": "https://www.youtube.com/shorts/kkM_2z6nXzA",
       "startSeconds": 0,
-      "durationSeconds": 6
+      "durationSeconds": 5.2
     },
     {
       "rank": 3,
-      "file": "clip-3.mp4",
-      "title": "Momento 3",
-      "creator": "@creator",
-      "sourceUrl": "https://...",
+      "file": "clip3.mp4",
+      "title": "Sigue colgada",
+      "creator": "AFV",
+      "sourceUrl": "https://www.youtube.com/shorts/PqVg_u7VUwA",
       "startSeconds": 0,
-      "durationSeconds": 6
+      "durationSeconds": 4.6
     },
     {
       "rank": 2,
-      "file": "clip-2.mp4",
-      "title": "Momento 2",
-      "creator": "@creator",
-      "sourceUrl": "https://...",
+      "file": "clip2.mp4",
+      "title": "Todos nos arrepentimos",
+      "creator": "The Savage Siblings",
+      "sourceUrl": "https://www.youtube.com/shorts/xBBfHrEhWgw",
       "startSeconds": 0,
-      "durationSeconds": 6
+      "durationSeconds": 16.6
     },
     {
       "rank": 1,
-      "file": "clip-1.mp4",
-      "title": "Momento 1",
-      "creator": "@creator",
-      "sourceUrl": "https://...",
+      "file": "clip1.mp4",
+      "title": "Karma instantaneo",
+      "creator": "Kreivas",
+      "sourceUrl": "https://www.youtube.com/shorts/a_1nVKqF6ZE",
       "startSeconds": 0,
-      "durationSeconds": 6
+      "durationSeconds": 9.3
     }
   ]
 }

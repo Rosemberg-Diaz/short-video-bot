@@ -12,10 +12,12 @@ const MAX_TOP_DURATION_SECONDS = 60;
 
 export class TopVideoBuilderService {
   async healthCheck(): Promise<void> {
-    await Promise.all([
-      assertExecutable(mediaConfig.ffmpegPath),
-      assertExecutable(mediaConfig.ffprobePath),
-    ]);
+    await assertExecutable(mediaConfig.ffmpegPath);
+    try {
+      await assertExecutable(mediaConfig.ffprobePath);
+    } catch {
+      // ffmpeg can still report media duration when ffprobe is unavailable.
+    }
   }
 
   async loadManifest(manifestPath: string): Promise<TopVideoManifest> {
@@ -40,16 +42,12 @@ export class TopVideoBuilderService {
     await runProcess(mediaConfig.ffmpegPath, [
       "-y",
       ...clips.flatMap((clip) => ["-i", clip.absolutePath]),
-      "-f",
-      "lavfi",
-      "-i",
-      "anullsrc=channel_layout=stereo:sample_rate=44100",
       "-filter_complex",
-      this.buildFilter(clips),
+      this.buildFilter(clips, manifest.title),
       "-map",
       "[video]",
       "-map",
-      `${clips.length}:a`,
+      "[audio]",
       "-c:v",
       "libx264",
       "-preset",
@@ -138,27 +136,34 @@ export class TopVideoBuilderService {
 
   private buildFilter(
     clips: Array<TopClip & { absolutePath: string; duration: number }>,
+    title: string,
   ): string {
+    const headline = this.escapeDrawText(this.getRankingHeadline(title));
+    const fontFile = this.escapeFontFilePath(this.getBoldFontFile());
     const normalized = clips.map((clip, index) => {
       const start = clip.startSeconds ?? 0;
-      const title = this.escapeDrawText(`#${clip.rank} ${clip.title}`);
-      const credit = this.escapeDrawText(clip.creator ? `credit: ${clip.creator}` : "");
-      const drawCredit = credit
-        ? `,drawtext=text='${credit}':x=44:y=h-132:fontsize=34:fontcolor=white:borderw=3:bordercolor=black@0.75`
-        : "";
+      const rankingList = this.buildRankingListOverlay(clips, clip.rank, fontFile);
 
       return (
         `[${index}:v]trim=start=${start}:duration=${clip.duration},` +
         "setpts=PTS-STARTPTS," +
         "scale=1080:1920:force_original_aspect_ratio=increase," +
         "crop=1080:1920,setsar=1,fps=30,format=yuv420p," +
-        "drawbox=x=0:y=0:w=1080:h=220:color=black@0.45:t=fill," +
-        `drawtext=text='${title}':x=44:y=70:fontsize=56:fontcolor=white:borderw=4:bordercolor=black@0.8` +
-        `${drawCredit}[v${index}]`
+        "drawbox=x=0:y=0:w=1080:h=250:color=black@0.20:t=fill," +
+        `drawtext=fontfile='${fontFile}':text='RANKING':x=(w-text_w)/2:y=70:fontsize=74:fontcolor=yellow:borderw=7:bordercolor=black,` +
+        `drawtext=fontfile='${fontFile}':text='${headline}':x=(w-text_w)/2:y=155:fontsize=68:fontcolor=white:borderw=7:bordercolor=black` +
+        `${rankingList},` +
+        `drawtext=fontfile='${fontFile}':text='TOP VIRAL':x=(w-text_w)/2:y=h-115:fontsize=30:fontcolor=white:borderw=4:bordercolor=black[v${index}];` +
+        `[${index}:a]atrim=start=${start}:duration=${clip.duration},` +
+        "asetpts=PTS-STARTPTS,aresample=44100," +
+        `aformat=sample_fmts=fltp:channel_layouts=stereo[a${index}]`
       );
     });
-    const concatInputs = clips.map((_, index) => `[v${index}]`).join("");
-    return [...normalized, `${concatInputs}concat=n=${clips.length}:v=1:a=0[video]`].join(";");
+    const concatInputs = clips.map((_, index) => `[v${index}][a${index}]`).join("");
+    return [
+      ...normalized,
+      `${concatInputs}concat=n=${clips.length}:v=1:a=1[video][audio]`,
+    ].join(";");
   }
 
   private escapeDrawText(value: string): string {
@@ -168,5 +173,51 @@ export class TopVideoBuilderService {
       .replace(/'/gu, "\\'")
       .replace(/\[/gu, "\\[")
       .replace(/\]/gu, "\\]");
+  }
+
+  private buildRankingListOverlay(
+    clips: Array<TopClip & { absolutePath: string; duration: number }>,
+    currentRank: number,
+    fontFile: string,
+  ): string {
+    return clips
+      .map((clip, index) => {
+        const y = 815 + index * 78;
+        const label =
+          clip.rank <= currentRank ? this.escapeDrawText(this.compactRankingTitle(clip)) : "";
+        const textOverlay = label
+          ? `,drawtext=fontfile='${fontFile}':text='${label}':x=116:y=${y}:fontsize=42:fontcolor=white:borderw=5:bordercolor=black`
+          : "";
+        return (
+          `,drawtext=fontfile='${fontFile}':text='${clip.rank}.':x=54:y=${y}:fontsize=42:fontcolor=yellow:borderw=4:bordercolor=black` +
+          textOverlay
+        );
+      })
+      .join("");
+  }
+
+  private compactRankingTitle(clip: TopClip): string {
+    const title = clip.title
+      .replace(/[^\p{L}\p{N}\s?]/gu, "")
+      .replace(/\s+/gu, " ")
+      .trim();
+    if (title.length <= 24) return title;
+    return `${title.slice(0, 21).trim()}...`;
+  }
+
+  private getRankingHeadline(title: string): string {
+    return title
+      .replace(/^top\s*5\s*/iu, "")
+      .replace(/^top\s*/iu, "")
+      .trim()
+      .toUpperCase();
+  }
+
+  private getBoldFontFile(): string {
+    return "C:/Windows/Fonts/arialbd.ttf";
+  }
+
+  private escapeFontFilePath(value: string): string {
+    return value.replace(/:/gu, "\\:");
   }
 }

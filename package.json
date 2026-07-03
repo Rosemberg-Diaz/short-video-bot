@@ -15,6 +15,7 @@
     "generate:full": "prisma db push && tsx src/video-builder/generate-full.command.ts",
     "youtube:auth": "tsx src/youtube-uploader/youtube-auth.command.ts",
     "youtube:upload": "prisma db push && tsx src/youtube-uploader/upload-youtube.command.ts",
+    "youtube:cleanup-local": "tsx src/youtube-uploader/cleanup-local-assets.command.ts",
     "youtube:privacy": "tsx src/youtube-uploader/update-youtube-privacy.command.ts",
     "generate:publish": "prisma db push && tsx src/youtube-uploader/generate-publish.command.ts",
     "trend:scout": "tsx src/trend-scouting/generate-trend-scout.command.ts",
