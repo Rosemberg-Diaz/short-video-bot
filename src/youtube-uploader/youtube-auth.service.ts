@@ -41,16 +41,18 @@ export class YouTubeAuthService {
     return client;
   }
 
-  async authorize(): Promise<void> {
+  async authorize(code?: string): Promise<void> {
     const client = this.createClient();
-    const authUrl = client.generateAuthUrl({
-      access_type: "offline",
-      prompt: "consent",
-      scope: YOUTUBE_SCOPES,
-    });
-
-    const code = await this.waitForOAuthCode(authUrl);
-    const { tokens } = await client.getToken(code);
+    const authCode =
+      code?.trim() ||
+      (await this.waitForOAuthCode(
+        client.generateAuthUrl({
+          access_type: "offline",
+          prompt: "consent",
+          scope: YOUTUBE_SCOPES,
+        }),
+      ));
+    const { tokens } = await client.getToken(authCode);
 
     fs.mkdirSync(path.dirname(this.config.tokenPath), { recursive: true });
     fs.writeFileSync(
