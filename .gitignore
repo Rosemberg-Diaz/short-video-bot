@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .env
+.codex-remote-attachments/
 *.db
 *.db-journal
 prisma/dev.db

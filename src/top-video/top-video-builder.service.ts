@@ -6,11 +6,17 @@ import { probeDuration } from "../utils/media";
 import { assertExecutable, runProcess } from "../utils/process";
 import { slugify } from "../utils/text";
 import type { TopBuildResult, TopClip, TopVideoManifest } from "./top-video.types";
+import {
+  TopVoiceoverService,
+  type TopVoiceoverSegment,
+} from "./top-voiceover.service";
 
 const DEFAULT_CLIP_DURATION_SECONDS = 6;
 const MAX_TOP_DURATION_SECONDS = 60;
 
 export class TopVideoBuilderService {
+  private readonly voiceoverService = new TopVoiceoverService();
+
   async healthCheck(): Promise<void> {
     await assertExecutable(mediaConfig.ffmpegPath);
     try {
@@ -38,12 +44,18 @@ export class TopVideoBuilderService {
     const videoPath = path.join(outputDirectory, `${slug}.mp4`);
     const metadataPath = path.join(outputDirectory, `${slug}.metadata.json`);
     const clips = await this.resolveClips(manifest, manifestDirectory);
+    const voiceoverSegments = await this.voiceoverService.generate(
+      manifest,
+      clips,
+      outputDirectory,
+    );
 
     await runProcess(mediaConfig.ffmpegPath, [
       "-y",
       ...clips.flatMap((clip) => ["-i", clip.absolutePath]),
+      ...voiceoverSegments.flatMap((segment) => ["-i", segment.filePath]),
       "-filter_complex",
-      this.buildFilter(clips, manifest.title),
+      this.buildFilter(clips, manifest.title, voiceoverSegments),
       "-map",
       "[video]",
       "-map",
@@ -72,7 +84,11 @@ export class TopVideoBuilderService {
       `${JSON.stringify(
         {
           ...manifest,
-          output: { videoPath, durationSeconds: Number(duration.toFixed(2)) },
+          output: {
+            videoPath,
+            durationSeconds: Number(duration.toFixed(2)),
+            voiceoverSegments,
+          },
         },
         null,
         2,
@@ -137,6 +153,7 @@ export class TopVideoBuilderService {
   private buildFilter(
     clips: Array<TopClip & { absolutePath: string; duration: number }>,
     title: string,
+    voiceoverSegments: TopVoiceoverSegment[],
   ): string {
     const headline = this.escapeDrawText(this.getRankingHeadline(title));
     const fontFile = this.escapeFontFilePath(this.getBoldFontFile());
@@ -162,7 +179,37 @@ export class TopVideoBuilderService {
     const concatInputs = clips.map((_, index) => `[v${index}][a${index}]`).join("");
     return [
       ...normalized,
-      `${concatInputs}concat=n=${clips.length}:v=1:a=1[video][audio]`,
+      `${concatInputs}concat=n=${clips.length}:v=1:a=1[video][clipaudio]`,
+      this.buildAudioMixFilter(clips, voiceoverSegments),
+    ].join(";");
+  }
+
+  private buildAudioMixFilter(
+    clips: Array<TopClip & { absolutePath: string; duration: number }>,
+    voiceoverSegments: TopVoiceoverSegment[],
+  ): string {
+    if (voiceoverSegments.length === 0) {
+      return "[clipaudio]anull[audio]";
+    }
+
+    const voiceFilters = voiceoverSegments.map((segment, index) => {
+      const inputIndex = clips.length + index;
+      const delayMs = Math.max(0, Math.round(segment.startSeconds * 1000));
+      return (
+        `[${inputIndex}:a]aresample=44100,` +
+        "aformat=sample_fmts=fltp:channel_layouts=stereo," +
+        "volume=1.18," +
+        `adelay=${delayMs}|${delayMs}[voice${index}]`
+      );
+    });
+    const voiceInputs = voiceoverSegments.map((_, index) => `[voice${index}]`).join("");
+
+    return [
+      ...voiceFilters,
+      `${voiceInputs}amix=inputs=${voiceoverSegments.length}:duration=longest:dropout_transition=0[voicemix]`,
+      "[clipaudio]volume=0.92[baseaudio]",
+      "[baseaudio][voicemix]sidechaincompress=threshold=0.035:ratio=9:attack=18:release=360[ducked]",
+      "[ducked][voicemix]amix=inputs=2:duration=first:dropout_transition=0[audio]",
     ].join(";");
   }
 
