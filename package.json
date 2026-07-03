@@ -20,6 +20,7 @@
     "generate:publish": "prisma db push && tsx src/youtube-uploader/generate-publish.command.ts",
     "trend:scout": "tsx src/trend-scouting/generate-trend-scout.command.ts",
     "tops:init": "tsx src/top-video/init-top.command.ts",
+    "tops:download-approved": "tsx src/top-video/download-approved-clips.command.ts",
     "tops:build": "tsx src/top-video/build-top.command.ts",
     "media:audit": "tsx src/video-builder/audit-pipeline.command.ts",
     "media:check": "tsx src/video-builder/check-media-dependencies.command.ts",
