@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import type { Episode } from "@prisma/client";
+import type { Episode, TopVideo } from "@prisma/client";
 import { google, youtube_v3 } from "googleapis";
 import { YOUTUBE_UPLOAD_STATUS } from "../config/constants";
 import {
@@ -12,6 +12,20 @@ import { LocalAssetCleanupService } from "./local-asset-cleanup.service";
 import { YouTubeAuthService } from "./youtube-auth.service";
 
 export type UploadableEpisode = Episode;
+export type UploadableTopVideo = TopVideo;
+
+export interface UploadableVideo {
+  title: string;
+  description: string;
+  hashtags: string | string[];
+  videoPath: string;
+}
+
+export interface UploadedVideoResult {
+  videoId: string;
+  youtubeUrl: string;
+  privacyStatus: YouTubePrivacyStatus;
+}
 
 export class YouTubeUploaderService {
   private readonly authService: YouTubeAuthService;
@@ -51,7 +65,15 @@ export class YouTubeUploaderService {
       const response = await youtube.videos.insert({
         part: ["snippet", "status"],
         notifySubscribers: this.config.notifySubscribers,
-        requestBody: this.createVideoResource(episode, privacyStatus),
+        requestBody: this.createVideoResource(
+          {
+            title: episode.title,
+            description: episode.description,
+            hashtags: episode.hashtags,
+            videoPath: episode.videoPath,
+          },
+          privacyStatus,
+        ),
         media: {
           body: fs.createReadStream(episode.videoPath),
         },
@@ -101,16 +123,109 @@ export class YouTubeUploaderService {
     }
   }
 
+  async uploadVideo(
+    video: UploadableVideo,
+    privacyStatus: YouTubePrivacyStatus = this.config.defaultPrivacyStatus,
+  ): Promise<UploadedVideoResult> {
+    if (!video.videoPath) {
+      throw new Error("El video no tiene videoPath.");
+    }
+    if (!fs.existsSync(video.videoPath)) {
+      throw new Error(`No existe el video: ${video.videoPath}`);
+    }
+
+    const auth = await this.authService.getAuthorizedClient();
+    const youtube = google.youtube({ version: "v3", auth });
+    const response = await youtube.videos.insert({
+      part: ["snippet", "status"],
+      notifySubscribers: this.config.notifySubscribers,
+      requestBody: this.createVideoResource(video, privacyStatus),
+      media: {
+        body: fs.createReadStream(video.videoPath),
+      },
+    });
+
+    const videoId = response.data.id;
+    if (!videoId) {
+      throw new Error("YouTube no devolvio un video ID.");
+    }
+
+    return {
+      videoId,
+      youtubeUrl: `https://www.youtube.com/watch?v=${videoId}`,
+      privacyStatus,
+    };
+  }
+
+  async uploadTopVideo(
+    topVideo: UploadableTopVideo,
+    privacyStatus: YouTubePrivacyStatus = this.config.defaultPrivacyStatus,
+  ): Promise<TopVideo> {
+    if (topVideo.youtubeUploadStatus === YOUTUBE_UPLOAD_STATUS.COMPLETED) {
+      throw new Error(
+        `El top #${topVideo.id} ya fue subido: ${topVideo.youtubeUrl}`,
+      );
+    }
+    if (!topVideo.videoPath) {
+      throw new Error(`El top #${topVideo.id} no tiene videoPath.`);
+    }
+    if (!fs.existsSync(topVideo.videoPath)) {
+      throw new Error(`No existe el video: ${topVideo.videoPath}`);
+    }
+
+    await prisma.topVideo.update({
+      where: { id: topVideo.id },
+      data: {
+        youtubeUploadStatus: YOUTUBE_UPLOAD_STATUS.UPLOADING,
+        youtubeUploadError: null,
+      },
+    });
+
+    try {
+      const uploaded = await this.uploadVideo(
+        {
+          title: topVideo.title,
+          description: topVideo.description,
+          hashtags: topVideo.hashtags,
+          videoPath: topVideo.videoPath,
+        },
+        privacyStatus,
+      );
+
+      return prisma.topVideo.update({
+        where: { id: topVideo.id },
+        data: {
+          youtubeVideoId: uploaded.videoId,
+          youtubeUrl: uploaded.youtubeUrl,
+          youtubeUploadStatus: YOUTUBE_UPLOAD_STATUS.COMPLETED,
+          youtubeUploadError: null,
+          youtubePrivacyStatus: privacyStatus,
+          uploadedAt: new Date(),
+        },
+      });
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : String(error);
+      await prisma.topVideo.update({
+        where: { id: topVideo.id },
+        data: {
+          youtubeUploadStatus: YOUTUBE_UPLOAD_STATUS.FAILED,
+          youtubeUploadError: message.slice(0, 4000),
+        },
+      });
+      throw error;
+    }
+  }
+
   private createVideoResource(
-    episode: UploadableEpisode,
+    video: UploadableVideo,
     privacyStatus: YouTubePrivacyStatus,
   ): youtube_v3.Schema$Video {
-    const tags = this.extractTags(episode.hashtags);
-    const description = this.buildDescription(episode);
+    const tags = this.extractTags(video.hashtags);
+    const description = this.buildDescription(video);
 
     return {
       snippet: {
-        title: this.truncate(episode.title, 100),
+        title: this.truncate(video.title, 100),
         description,
         tags,
         categoryId: this.config.defaultCategoryId,
@@ -125,13 +240,15 @@ export class YouTubeUploaderService {
     };
   }
 
-  private buildDescription(episode: UploadableEpisode): string {
-    const hashtags = this.extractTags(episode.hashtags).join(" ");
+  private buildDescription(video: UploadableVideo): string {
+    const hashtags = this.extractTags(video.hashtags).map((tag) => `#${tag}`).join(" ");
     return this.truncate(
       [
-        episode.description,
+        video.description,
         "",
-        "Short de terror tecnologico generado con AI Horror Shorts Factory.",
+        this.config.channel === "viral-tops"
+          ? "Top viral generado automaticamente por Short Video Bot."
+          : "Short de terror tecnologico generado con AI Horror Shorts Factory.",
         hashtags,
       ]
         .filter(Boolean)
@@ -140,8 +257,9 @@ export class YouTubeUploaderService {
     );
   }
 
-  private extractTags(rawHashtags: string): string[] {
-    const tags = rawHashtags
+  private extractTags(rawHashtags: string | string[]): string[] {
+    const raw = Array.isArray(rawHashtags) ? rawHashtags.join(" ") : rawHashtags;
+    const tags = raw
       .split(/\s+/u)
       .map((tag) => tag.trim())
       .filter(Boolean)

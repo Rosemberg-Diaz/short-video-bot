@@ -85,10 +85,41 @@ npm run trend:scout -- --resolve-clips=true
 
 Para esa busqueda especifica configura `YOUTUBE_SEARCH_API_KEY` en `.env`.
 
+Generar automaticamente el top recomendado, descargar 5 Shorts con `yt-dlp` y
+renderizar el video final:
+
+```bash
+npm run trend:auto-top
+```
+
+Generar, descargar, renderizar y publicar automaticamente en el canal
+`viral-tops` como publico:
+
+```bash
+npm run trend:auto-publish
+```
+
+Opciones utiles:
+
+```bash
+npm run trend:auto-top -- --auto-build-rank=1 --proposals=2 --candidates=8
+```
+
+Configura `YT_DLP_PATH` si `yt-dlp` no esta en el PATH. La salida descargada
+queda en `assets/approved_clips/<slug-del-top>` y el video final en
+`output/tops`. Para publicar automaticamente, primero autoriza el canal con
+`npm run youtube:auth -- --channel=viral-tops`. Los tops generados/publicados se
+registran en Prisma en `TopVideo` con manifest, metadata, clips, estado de
+render y datos de YouTube.
+
+`yt-dlp` es una herramienta gratuita y open source. Eso solo cubre la descarga
+tecnica; debes validar derechos, licencias y terminos de cada plataforma antes
+de reutilizar clips.
+
 El reporte se exporta a `output/trend-scouting` en JSON y Markdown. Este flujo
-solo recomienda ideas, busquedas y criterios de seleccion; los clips finales se
-deben descargar/revisar manualmente y guardar en una carpeta aprobada antes de
-armar el video.
+puede quedarse solo en recomendaciones o ejecutar el armado automatico con
+`--auto-build=true`. Usa `--auto-publish=true` para subir el resultado al canal
+`viral-tops` con privacidad publica.
 
 Si quieres usar otra fuente de tendencias, configura `TREND_SCOUT_RSS_URLS` en
 `.env` con una o varias URLs RSS separadas por coma.

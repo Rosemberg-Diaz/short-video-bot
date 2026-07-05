@@ -253,11 +253,17 @@ export class TopVideoBuilderService {
   }
 
   private getRankingHeadline(title: string): string {
-    return title
+    const headline = title
       .replace(/^top\s*5\s*/iu, "")
       .replace(/^top\s*/iu, "")
+      .replace(/#shorts/giu, "")
+      .replace(/\s+que\s+parecen\s+irreales.*$/iu, "")
+      .replace(/^cosas\s+/iu, "")
       .trim()
       .toUpperCase();
+
+    if (headline.length <= 24) return headline;
+    return `${headline.slice(0, 21).trim()}...`;
   }
 
   private getBoldFontFile(): string {

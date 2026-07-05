@@ -9,6 +9,7 @@ function numberFromEnv(name: string, fallback: number): number {
 export const mediaConfig = {
   ffmpegPath: process.env.FFMPEG_PATH || "ffmpeg",
   ffprobePath: process.env.FFPROBE_PATH || "ffprobe",
+  ytDlpPath: process.env.YT_DLP_PATH || "yt-dlp",
   piperPath: process.env.PIPER_PATH || "piper",
   piperModelPath: process.env.PIPER_MODEL_PATH || "",
   stableDiffusionUrl:

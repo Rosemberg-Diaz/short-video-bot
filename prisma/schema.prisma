@@ -55,6 +55,37 @@ model Episode {
   @@index([youtubeUploadStatus])
 }
 
+model TopVideo {
+  id                   Int       @id @default(autoincrement())
+  title                String
+  slug                 String
+  proposalRank         Int
+  score                Int
+  category             String
+  angle                String
+  description          String
+  hashtags             String
+  manifestPath         String
+  metadataPath         String?
+  videoPath            String?
+  sourceReportPath     String?
+  clipsJson            String
+  renderStatus         String    @default("PENDING")
+  renderError          String?
+  youtubeVideoId       String?
+  youtubeUrl           String?
+  youtubeUploadStatus  String    @default("PENDING")
+  youtubeUploadError   String?
+  youtubePrivacyStatus String?
+  uploadedAt           DateTime?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+
+  @@index([slug])
+  @@index([renderStatus])
+  @@index([youtubeUploadStatus])
+}
+
 model Scene {
   id              Int      @id @default(autoincrement())
   episodeId       Int

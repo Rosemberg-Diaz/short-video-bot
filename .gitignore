@@ -29,5 +29,6 @@ tools/downloads/
 tools/piper/
 tools/stable-diffusion-forge/
 tools/7zr.exe
+tools/yt-dlp.exe
 !output/scripts/.gitkeep
 !output/metadata/.gitkeep

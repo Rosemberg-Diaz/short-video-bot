@@ -1,0 +1,59 @@
+{
+  "title": "Top cosas captadas en camara que parecen irreales #Shorts",
+  "slug": "top-cosas-captadas-en-camara",
+  "description": "situaciones raras o sorprendentes que parecen irrepetibles",
+  "voiceoverStyle": "Narrador rapido, curioso y con remates cortos; explicar en una frase por que cada clip entra al ranking.",
+  "hashtags": [
+    "#Shorts",
+    "#Top5",
+    "#Viral",
+    "#curiosidades"
+  ],
+  "clips": [
+    {
+      "rank": 1,
+      "file": "clip-1.mp4",
+      "title": "A Glitch In The Matrix Caught On Camera At Disneyland #shorts",
+      "creator": "Nostalgia Mountain",
+      "sourceUrl": "https://www.youtube.com/shorts/Bp1UtbE1dak",
+      "startSeconds": 0,
+      "durationSeconds": 8
+    },
+    {
+      "rank": 2,
+      "file": "clip-2.mp4",
+      "title": "Rare Moments In Football 😳",
+      "creator": "Nine90M",
+      "sourceUrl": "https://www.youtube.com/shorts/TSbxCWtum_U",
+      "startSeconds": 0,
+      "durationSeconds": 8
+    },
+    {
+      "rank": 3,
+      "file": "clip-3.mp4",
+      "title": "Trying not to laugh! 🤣🤣 (4k memes) #shorts.  click the blue Join button to support my animations",
+      "creator": "Rico Animations",
+      "sourceUrl": "https://www.youtube.com/shorts/sxmTTS4qros",
+      "startSeconds": 0,
+      "durationSeconds": 8
+    },
+    {
+      "rank": 4,
+      "file": "clip-4.mp4",
+      "title": "Cosas PARANORMALES captadas en CÁMARA #shorts",
+      "creator": "ModernosTV",
+      "sourceUrl": "https://www.youtube.com/shorts/_-Gz4WF_4Zw",
+      "startSeconds": 0,
+      "durationSeconds": 6
+    },
+    {
+      "rank": 5,
+      "file": "clip-5.mp4",
+      "title": "Two Crimes Caught On Camera in ISRAEL #Shorts SHOCKING CCTV FOOTAGE",
+      "creator": "Cains Tales",
+      "sourceUrl": "https://www.youtube.com/shorts/cxXEO6ZBXJ8",
+      "startSeconds": 0,
+      "durationSeconds": 8
+    }
+  ]
+}

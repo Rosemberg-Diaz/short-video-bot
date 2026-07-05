@@ -1,7 +1,9 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { mediaConfig } from "../config/media.config";
 import { ttsConfig } from "../config/tts.config";
 import { probeDuration } from "../utils/media";
+import { runProcess } from "../utils/process";
 import { slugify } from "../utils/text";
 import type { TopClip, TopVideoManifest } from "./top-video.types";
 
@@ -39,7 +41,10 @@ export class TopVoiceoverService {
     const segments: TopVoiceoverSegment[] = [];
     for (const [index, clip] of clips.entries()) {
       const text = scripts[index]!;
-      const filePath = path.join(directory, `${String(index + 1).padStart(2, "0")}.mp3`);
+      const filePath = path.join(
+        directory,
+        `${String(index + 1).padStart(2, "0")}.${this.getAudioExtension()}`,
+      );
       await this.synthesize(text, filePath);
       const durationSeconds = await probeDuration(filePath);
       segments.push({
@@ -89,7 +94,7 @@ export class TopVoiceoverService {
   }
 
   private buildRankingLine(clip: TopClip): string {
-    const title = this.cleanSpeechText(clip.title);
+    const title = this.compactSpeechTitle(clip.title);
     const lower = title.toLowerCase();
     if (lower.includes("karma")) {
       return "karma instantaneo, sin margen de reaccion.";
@@ -111,9 +116,22 @@ export class TopVoiceoverService {
 
   private cleanSpeechText(value: string): string {
     return value
+      .replace(/#\w+/gu, " ")
+      .replace(/\bclick\b.*$/iu, " ")
+      .replace(/\bsubscribe\b.*$/iu, " ")
+      .replace(/\bsupport my\b.*$/iu, " ")
       .replace(/[^\p{L}\p{N}\s.,:;!?]/gu, " ")
       .replace(/\s+/gu, " ")
       .trim();
+  }
+
+  private compactSpeechTitle(value: string): string {
+    const title = this.cleanSpeechText(value)
+      .replace(/\([^)]*\)/gu, " ")
+      .replace(/\s+/gu, " ")
+      .trim();
+    if (title.length <= 42) return title;
+    return title.slice(0, 39).trim();
   }
 
   private async synthesize(text: string, filePath: string): Promise<void> {
@@ -125,7 +143,27 @@ export class TopVoiceoverService {
       await this.synthesizeWithOpenAi(text, filePath);
       return;
     }
+    if (ttsConfig.provider === "piper") {
+      await this.synthesizeWithPiper(text, filePath);
+      return;
+    }
     throw new Error("No hay proveedor TTS configurado.");
+  }
+
+  private getAudioExtension(): "mp3" | "wav" {
+    return ttsConfig.provider === "piper" ? "wav" : "mp3";
+  }
+
+  private async synthesizeWithPiper(text: string, filePath: string): Promise<void> {
+    if (!mediaConfig.piperModelPath) {
+      throw new Error("Falta PIPER_MODEL_PATH.");
+    }
+
+    await runProcess(
+      mediaConfig.piperPath,
+      ["--model", mediaConfig.piperModelPath, "--output_file", filePath],
+      { input: text },
+    );
   }
 
   private async synthesizeWithElevenLabs(

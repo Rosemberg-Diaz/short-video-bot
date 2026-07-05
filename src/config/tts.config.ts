@@ -1,6 +1,6 @@
 import "dotenv/config";
 
-export type TtsProvider = "elevenlabs" | "openai" | "none";
+export type TtsProvider = "elevenlabs" | "openai" | "piper" | "none";
 
 function boolFromEnv(name: string, fallback: boolean): boolean {
   const value = process.env[name]?.toLowerCase();
@@ -16,7 +16,12 @@ function numberFromEnv(name: string, fallback: number): number {
 
 function resolveProvider(): TtsProvider {
   const configured = process.env.TOPS_TTS_PROVIDER?.toLowerCase();
-  if (configured === "elevenlabs" || configured === "openai" || configured === "none") {
+  if (
+    configured === "elevenlabs" ||
+    configured === "openai" ||
+    configured === "piper" ||
+    configured === "none"
+  ) {
     return configured;
   }
   if (process.env.ELEVENLABS_API_KEY) return "elevenlabs";

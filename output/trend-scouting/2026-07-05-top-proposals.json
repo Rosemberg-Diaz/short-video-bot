@@ -1,0 +1,1150 @@
+{
+  "generatedAt": "2026-07-05T00:13:02.813Z",
+  "dateKey": "2026-07-05",
+  "proposalCount": 2,
+  "candidatesPerProposal": 8,
+  "proposals": [
+    {
+      "rank": 1,
+      "score": 93,
+      "title": "Top cosas captadas en camara",
+      "category": "Curiosidades",
+      "angle": "situaciones raras o sorprendentes que parecen irrepetibles",
+      "whyThisCanWork": [
+        "Categoria con buena disponibilidad de clips: 83/100.",
+        "Promesa visual rapida para Shorts: 89/100.",
+        "Riesgo editorial manejable si se evitan: crimen real grafico, emergencias, desinformacion."
+      ],
+      "suggestedVideoTitle": "Top cosas captadas en camara que parecen irreales #Shorts",
+      "voiceoverStyle": "Narrador rapido, curioso y con remates cortos; explicar en una frase por que cada clip entra al ranking.",
+      "candidateClips": [
+        {
+          "rank": 1,
+          "hook": "Este tenia que entrar al top: situaciones raras o sorprendentes que parecen irrepetibles.",
+          "clipBrief": "situaciones raras o sorprendentes que parecen irrepetibles; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "5-8",
+          "searchQueries": [
+            "caught on camera viral short",
+            "caught on camera this week",
+            "caught on camera top moments",
+            "Curiosidades viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=caught%20on%20camera",
+            "https://www.youtube.com/results?search_query=caught%20on%20camera%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=caught%20on%20camera"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "A Glitch In The Matrix Caught On Camera At Disneyland #shorts",
+              "url": "https://www.youtube.com/shorts/Bp1UtbE1dak",
+              "creator": "Nostalgia Mountain",
+              "publishedAt": "2022-06-20T03:38:49Z",
+              "viewCount": 16087317,
+              "likeCount": 385099,
+              "durationSeconds": 17,
+              "score": 100,
+              "sourceQuery": "caught on camera viral short",
+              "recommendationReason": "Short relacionado con \"caught on camera viral short\", 16,087,317 views, 17s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Two Crimes Caught On Camera in ISRAEL #Shorts SHOCKING CCTV FOOTAGE",
+              "url": "https://www.youtube.com/shorts/cxXEO6ZBXJ8",
+              "creator": "Cains Tales",
+              "publishedAt": "2022-01-17T21:10:30Z",
+              "viewCount": 1332533,
+              "likeCount": 8981,
+              "durationSeconds": 14,
+              "score": 100,
+              "sourceQuery": "caught on camera viral short",
+              "recommendationReason": "Short relacionado con \"caught on camera viral short\", 1,332,533 views, 14s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Creepy Things Caught On Security Cameras | WTF #shorts #creepy #weird",
+              "url": "https://www.youtube.com/shorts/gaJnkCZEkD0",
+              "creator": "Jason Cline Show",
+              "publishedAt": "2022-11-26T16:00:20Z",
+              "viewCount": 1663607,
+              "likeCount": 34099,
+              "durationSeconds": 14,
+              "score": 100,
+              "sourceQuery": "caught on camera viral short",
+              "recommendationReason": "Short relacionado con \"caught on camera viral short\", 1,663,607 views, 14s"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "hook": "El remate de este clip es perfecto: situaciones raras o sorprendentes que parecen irrepetibles.",
+          "clipBrief": "situaciones raras o sorprendentes que parecen irrepetibles; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "5-8",
+          "searchQueries": [
+            "rare moments viral short",
+            "rare moments this week",
+            "rare moments top moments",
+            "Curiosidades viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=rare%20moments",
+            "https://www.youtube.com/results?search_query=rare%20moments%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=rare%20moments"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Rare Moments In Football 😳",
+              "url": "https://www.youtube.com/shorts/TSbxCWtum_U",
+              "creator": "Nine90M",
+              "publishedAt": "2025-01-31T12:21:16Z",
+              "viewCount": 34499292,
+              "likeCount": 930784,
+              "durationSeconds": 20,
+              "score": 100,
+              "sourceQuery": "rare moments viral short",
+              "recommendationReason": "Short relacionado con \"rare moments viral short\", 34,499,292 views, 20s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Ronaldo Rare Moments 🥶",
+              "url": "https://www.youtube.com/shorts/Ypb3pRS2QKk",
+              "creator": "Shorts Sports X",
+              "publishedAt": "2024-07-12T08:14:22Z",
+              "viewCount": 124780550,
+              "likeCount": 2816871,
+              "durationSeconds": 30,
+              "score": 100,
+              "sourceQuery": "rare moments viral short",
+              "recommendationReason": "Short relacionado con \"rare moments viral short\", 124,780,550 views, 30s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Trying not to laugh! 🤣🤣 (4k memes) #shorts.  click the blue Join button to support my animations",
+              "url": "https://www.youtube.com/shorts/sxmTTS4qros",
+              "creator": "Rico Animations",
+              "publishedAt": "2023-06-06T13:57:49Z",
+              "viewCount": 253039865,
+              "likeCount": 4807805,
+              "durationSeconds": 9,
+              "score": 100,
+              "sourceQuery": "rare moments viral short",
+              "recommendationReason": "Short relacionado con \"rare moments viral short\", 253,039,865 views, 9s"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "hook": "Este momento parece actuado, pero no: situaciones raras o sorprendentes que parecen irrepetibles.",
+          "clipBrief": "situaciones raras o sorprendentes que parecen irrepetibles; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "5-8",
+          "searchQueries": [
+            "unbelievable moments viral short",
+            "unbelievable moments this week",
+            "unbelievable moments top moments",
+            "Curiosidades viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=unbelievable%20moments",
+            "https://www.youtube.com/results?search_query=unbelievable%20moments%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=unbelievable%20moments"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Trying not to laugh! 🤣🤣 (4k memes) #shorts.  click the blue Join button to support my animations",
+              "url": "https://www.youtube.com/shorts/sxmTTS4qros",
+              "creator": "Rico Animations",
+              "publishedAt": "2023-06-06T13:57:49Z",
+              "viewCount": 253039865,
+              "likeCount": 4807805,
+              "durationSeconds": 9,
+              "score": 100,
+              "sourceQuery": "unbelievable moments viral short",
+              "recommendationReason": "Short relacionado con \"unbelievable moments viral short\", 253,039,865 views, 9s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "This really confused me at first 😂",
+              "url": "https://www.youtube.com/shorts/u_2FAZYAgxE",
+              "creator": "America's Funniest Home Videos",
+              "publishedAt": "2025-07-28T16:01:33Z",
+              "viewCount": 150511655,
+              "likeCount": 1536663,
+              "durationSeconds": 7,
+              "score": 100,
+              "sourceQuery": "unbelievable moments viral short",
+              "recommendationReason": "Short relacionado con \"unbelievable moments viral short\", 150,511,655 views, 7s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "ISSEI funny video 😂😂😂 Winter Sea #shorts",
+              "url": "https://www.youtube.com/shorts/BCz2tp8AI0c",
+              "creator": "ISSEI / いっせい",
+              "publishedAt": "2023-01-06T10:00:10Z",
+              "viewCount": 271243340,
+              "likeCount": 3819368,
+              "durationSeconds": 14,
+              "score": 100,
+              "sourceQuery": "unbelievable moments viral short",
+              "recommendationReason": "Short relacionado con \"unbelievable moments viral short\", 271,243,340 views, 14s"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "hook": "Aqui es donde todo cambia: situaciones raras o sorprendentes que parecen irrepetibles.",
+          "clipBrief": "situaciones raras o sorprendentes que parecen irrepetibles; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "5-8",
+          "searchQueries": [
+            "captado en camara viral short",
+            "captado en camara this week",
+            "captado en camara top moments",
+            "Curiosidades viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=captado%20en%20camara",
+            "https://www.youtube.com/results?search_query=captado%20en%20camara%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=captado%20en%20camara"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Cosas PARANORMALES captadas en CÁMARA #shorts",
+              "url": "https://www.youtube.com/shorts/_-Gz4WF_4Zw",
+              "creator": "ModernosTV",
+              "publishedAt": "2022-04-09T10:00:30Z",
+              "viewCount": 13771766,
+              "likeCount": 307038,
+              "durationSeconds": 6,
+              "score": 100,
+              "sourceQuery": "captado en camara viral short",
+              "recommendationReason": "Short relacionado con \"captado en camara viral short\", 13,771,766 views, 6s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "¿Crees En Los Ángeles? Mira esto Captado en Cámara!! #shorts",
+              "url": "https://www.youtube.com/shorts/71Ey-CXP1Yo",
+              "creator": "Xtreme Entertainment",
+              "publishedAt": "2022-05-06T19:37:37Z",
+              "viewCount": 4165157,
+              "likeCount": 102418,
+              "durationSeconds": 13,
+              "score": 100,
+              "sourceQuery": "captado en camara viral short",
+              "recommendationReason": "Short relacionado con \"captado en camara viral short\", 4,165,157 views, 13s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "DIOS VOLANDO CAPTADO EN CÁMARA📸😨#youtubeshorts #shorts #dios",
+              "url": "https://www.youtube.com/shorts/LRcMO74jIlM",
+              "creator": "DatoKing Extra",
+              "publishedAt": "2022-12-28T20:15:00Z",
+              "viewCount": 484200,
+              "likeCount": 26910,
+              "durationSeconds": 30,
+              "score": 98,
+              "sourceQuery": "captado en camara viral short",
+              "recommendationReason": "Short relacionado con \"captado en camara viral short\", 484,200 views, 30s"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "hook": "Este es el tipo de clip que retiene: situaciones raras o sorprendentes que parecen irrepetibles.",
+          "clipBrief": "situaciones raras o sorprendentes que parecen irrepetibles; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "5-8",
+          "searchQueries": [
+            "caught on camera viral short",
+            "caught on camera this week",
+            "caught on camera top moments",
+            "Curiosidades viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=caught%20on%20camera",
+            "https://www.youtube.com/results?search_query=caught%20on%20camera%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=caught%20on%20camera"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "A Glitch In The Matrix Caught On Camera At Disneyland #shorts",
+              "url": "https://www.youtube.com/shorts/Bp1UtbE1dak",
+              "creator": "Nostalgia Mountain",
+              "publishedAt": "2022-06-20T03:38:49Z",
+              "viewCount": 16087317,
+              "likeCount": 385099,
+              "durationSeconds": 17,
+              "score": 100,
+              "sourceQuery": "caught on camera viral short",
+              "recommendationReason": "Short relacionado con \"caught on camera viral short\", 16,087,317 views, 17s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Two Crimes Caught On Camera in ISRAEL #Shorts SHOCKING CCTV FOOTAGE",
+              "url": "https://www.youtube.com/shorts/cxXEO6ZBXJ8",
+              "creator": "Cains Tales",
+              "publishedAt": "2022-01-17T21:10:30Z",
+              "viewCount": 1332533,
+              "likeCount": 8981,
+              "durationSeconds": 14,
+              "score": 100,
+              "sourceQuery": "caught on camera viral short",
+              "recommendationReason": "Short relacionado con \"caught on camera viral short\", 1,332,533 views, 14s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Creepy Things Caught On Security Cameras | WTF #shorts #creepy #weird",
+              "url": "https://www.youtube.com/shorts/gaJnkCZEkD0",
+              "creator": "Jason Cline Show",
+              "publishedAt": "2022-11-26T16:00:20Z",
+              "viewCount": 1663607,
+              "likeCount": 34099,
+              "durationSeconds": 14,
+              "score": 100,
+              "sourceQuery": "caught on camera viral short",
+              "recommendationReason": "Short relacionado con \"caught on camera viral short\", 1,663,607 views, 14s"
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "hook": "Este tenia que entrar al top: situaciones raras o sorprendentes que parecen irrepetibles.",
+          "clipBrief": "situaciones raras o sorprendentes que parecen irrepetibles; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "4-7",
+          "searchQueries": [
+            "rare moments viral short",
+            "rare moments this week",
+            "rare moments top moments",
+            "Curiosidades viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=rare%20moments",
+            "https://www.youtube.com/results?search_query=rare%20moments%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=rare%20moments"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Rare Moments In Football 😳",
+              "url": "https://www.youtube.com/shorts/TSbxCWtum_U",
+              "creator": "Nine90M",
+              "publishedAt": "2025-01-31T12:21:16Z",
+              "viewCount": 34499292,
+              "likeCount": 930784,
+              "durationSeconds": 20,
+              "score": 100,
+              "sourceQuery": "rare moments viral short",
+              "recommendationReason": "Short relacionado con \"rare moments viral short\", 34,499,292 views, 20s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Ronaldo Rare Moments 🥶",
+              "url": "https://www.youtube.com/shorts/Ypb3pRS2QKk",
+              "creator": "Shorts Sports X",
+              "publishedAt": "2024-07-12T08:14:22Z",
+              "viewCount": 124780550,
+              "likeCount": 2816871,
+              "durationSeconds": 30,
+              "score": 100,
+              "sourceQuery": "rare moments viral short",
+              "recommendationReason": "Short relacionado con \"rare moments viral short\", 124,780,550 views, 30s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Trying not to laugh! 🤣🤣 (4k memes) #shorts.  click the blue Join button to support my animations",
+              "url": "https://www.youtube.com/shorts/sxmTTS4qros",
+              "creator": "Rico Animations",
+              "publishedAt": "2023-06-06T13:57:49Z",
+              "viewCount": 253039865,
+              "likeCount": 4807805,
+              "durationSeconds": 9,
+              "score": 100,
+              "sourceQuery": "rare moments viral short",
+              "recommendationReason": "Short relacionado con \"rare moments viral short\", 253,039,865 views, 9s"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "hook": "El remate de este clip es perfecto: situaciones raras o sorprendentes que parecen irrepetibles.",
+          "clipBrief": "situaciones raras o sorprendentes que parecen irrepetibles; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "4-7",
+          "searchQueries": [
+            "unbelievable moments viral short",
+            "unbelievable moments this week",
+            "unbelievable moments top moments",
+            "Curiosidades viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=unbelievable%20moments",
+            "https://www.youtube.com/results?search_query=unbelievable%20moments%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=unbelievable%20moments"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Trying not to laugh! 🤣🤣 (4k memes) #shorts.  click the blue Join button to support my animations",
+              "url": "https://www.youtube.com/shorts/sxmTTS4qros",
+              "creator": "Rico Animations",
+              "publishedAt": "2023-06-06T13:57:49Z",
+              "viewCount": 253039865,
+              "likeCount": 4807805,
+              "durationSeconds": 9,
+              "score": 100,
+              "sourceQuery": "unbelievable moments viral short",
+              "recommendationReason": "Short relacionado con \"unbelievable moments viral short\", 253,039,865 views, 9s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "ISSEI funny video 😂😂😂 Winter Sea #shorts",
+              "url": "https://www.youtube.com/shorts/BCz2tp8AI0c",
+              "creator": "ISSEI / いっせい",
+              "publishedAt": "2023-01-06T10:00:10Z",
+              "viewCount": 271243340,
+              "likeCount": 3819368,
+              "durationSeconds": 14,
+              "score": 100,
+              "sourceQuery": "unbelievable moments viral short",
+              "recommendationReason": "Short relacionado con \"unbelievable moments viral short\", 271,243,340 views, 14s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "This really confused me at first 😂",
+              "url": "https://www.youtube.com/shorts/u_2FAZYAgxE",
+              "creator": "America's Funniest Home Videos",
+              "publishedAt": "2025-07-28T16:01:33Z",
+              "viewCount": 150511655,
+              "likeCount": 1536663,
+              "durationSeconds": 7,
+              "score": 100,
+              "sourceQuery": "unbelievable moments viral short",
+              "recommendationReason": "Short relacionado con \"unbelievable moments viral short\", 150,511,655 views, 7s"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "hook": "Este momento parece actuado, pero no: situaciones raras o sorprendentes que parecen irrepetibles.",
+          "clipBrief": "situaciones raras o sorprendentes que parecen irrepetibles; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "4-7",
+          "searchQueries": [
+            "captado en camara viral short",
+            "captado en camara this week",
+            "captado en camara top moments",
+            "Curiosidades viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=captado%20en%20camara",
+            "https://www.youtube.com/results?search_query=captado%20en%20camara%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=captado%20en%20camara"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Cosas PARANORMALES captadas en CÁMARA #shorts",
+              "url": "https://www.youtube.com/shorts/_-Gz4WF_4Zw",
+              "creator": "ModernosTV",
+              "publishedAt": "2022-04-09T10:00:30Z",
+              "viewCount": 13771766,
+              "likeCount": 307038,
+              "durationSeconds": 6,
+              "score": 100,
+              "sourceQuery": "captado en camara viral short",
+              "recommendationReason": "Short relacionado con \"captado en camara viral short\", 13,771,766 views, 6s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "CIERRA LOS OJOS ANTES DEL CHOQUE 😱 #shorts",
+              "url": "https://www.youtube.com/shorts/DQR3m-BhbPM",
+              "creator": "TheDonato",
+              "publishedAt": "2022-04-28T18:45:11Z",
+              "viewCount": 65872554,
+              "likeCount": 2565652,
+              "durationSeconds": 16,
+              "score": 100,
+              "sourceQuery": "captado en camara viral short",
+              "recommendationReason": "Short relacionado con \"captado en camara viral short\", 65,872,554 views, 16s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Fotos perturbadoras que te darán escalofríos! 😳 #shorts",
+              "url": "https://www.youtube.com/shorts/kJ8EnRLbSe8",
+              "creator": "Marco Sander",
+              "publishedAt": "2022-01-18T22:00:16Z",
+              "viewCount": 3809578,
+              "likeCount": 151241,
+              "durationSeconds": 23,
+              "score": 100,
+              "sourceQuery": "captado en camara viral short",
+              "recommendationReason": "Short relacionado con \"captado en camara viral short\", 3,809,578 views, 23s"
+            }
+          ]
+        }
+      ],
+      "hashtags": [
+        "#Shorts",
+        "#Top5",
+        "#Viral",
+        "#curiosidades"
+      ],
+      "trendSignals": []
+    },
+    {
+      "rank": 2,
+      "score": 91,
+      "title": "Top fails inesperados",
+      "category": "Fails",
+      "angle": "momentos donde todo parece normal y sale mal en 1 segundo",
+      "whyThisCanWork": [
+        "Categoria con buena disponibilidad de clips: 90/100.",
+        "Promesa visual rapida para Shorts: 93/100.",
+        "Riesgo editorial manejable si se evitan: accidentes graves, lesiones, humillacion cruel."
+      ],
+      "suggestedVideoTitle": "Top fails inesperados que parecen irreales #Shorts",
+      "voiceoverStyle": "Narrador rapido, curioso y con remates cortos; explicar en una frase por que cada clip entra al ranking.",
+      "candidateClips": [
+        {
+          "rank": 1,
+          "hook": "Este tenia que entrar al top: momentos donde todo parece normal y sale mal en 1 segundo.",
+          "clipBrief": "momentos donde todo parece normal y sale mal en 1 segundo; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "5-8",
+          "searchQueries": [
+            "unexpected fails viral short",
+            "unexpected fails this week",
+            "unexpected fails top moments",
+            "Fails viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=unexpected%20fails",
+            "https://www.youtube.com/results?search_query=unexpected%20fails%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=unexpected%20fails"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Legend says, she still hangin' there #funny #fail #gymnastics #AFV",
+              "url": "https://www.youtube.com/shorts/PqVg_u7VUwA",
+              "creator": "America's Funniest Home Videos",
+              "publishedAt": "2023-08-05T00:00:16Z",
+              "viewCount": 46951365,
+              "likeCount": 271504,
+              "durationSeconds": 5,
+              "score": 100,
+              "sourceQuery": "unexpected fails viral short",
+              "recommendationReason": "Short relacionado con \"unexpected fails viral short\", 46,951,365 views, 5s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Ranking Top 5 FALLING Moments 😂 #funny #fails",
+              "url": "https://www.youtube.com/shorts/XulN4FZCqJ4",
+              "creator": "TopOfficial",
+              "publishedAt": "2025-05-09T06:38:11Z",
+              "viewCount": 9594887,
+              "likeCount": 88234,
+              "durationSeconds": 31,
+              "score": 100,
+              "sourceQuery": "unexpected fails viral short",
+              "recommendationReason": "Short relacionado con \"unexpected fails viral short\", 9,594,887 views, 31s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Wait for the end 😂 #shorts #funny #video #subscribe",
+              "url": "https://www.youtube.com/shorts/DEdHAWH33nk",
+              "creator": "Tiki Hena Vlogs",
+              "publishedAt": "2024-05-02T04:55:06Z",
+              "viewCount": 155925145,
+              "likeCount": 944797,
+              "durationSeconds": 15,
+              "score": 100,
+              "sourceQuery": "unexpected fails viral short",
+              "recommendationReason": "Short relacionado con \"unexpected fails viral short\", 155,925,145 views, 15s"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "hook": "El remate de este clip es perfecto: momentos donde todo parece normal y sale mal en 1 segundo.",
+          "clipBrief": "momentos donde todo parece normal y sale mal en 1 segundo; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "5-8",
+          "searchQueries": [
+            "funny fails viral short",
+            "funny fails this week",
+            "funny fails top moments",
+            "Fails viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=funny%20fails",
+            "https://www.youtube.com/results?search_query=funny%20fails%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=funny%20fails"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Update: he can't 🤣 #afv #fail #funny #shorts",
+              "url": "https://www.youtube.com/shorts/s0e24Oak93o",
+              "creator": "America's Funniest Home Videos",
+              "publishedAt": "2025-06-14T20:00:28Z",
+              "viewCount": 2470729,
+              "likeCount": 20417,
+              "durationSeconds": 10,
+              "score": 100,
+              "sourceQuery": "funny fails viral short",
+              "recommendationReason": "Short relacionado con \"funny fails viral short\", 2,470,729 views, 10s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Legend says, she still hangin' there #funny #fail #gymnastics #AFV",
+              "url": "https://www.youtube.com/shorts/PqVg_u7VUwA",
+              "creator": "America's Funniest Home Videos",
+              "publishedAt": "2023-08-05T00:00:16Z",
+              "viewCount": 46951365,
+              "likeCount": 271504,
+              "durationSeconds": 5,
+              "score": 100,
+              "sourceQuery": "funny fails viral short",
+              "recommendationReason": "Short relacionado con \"funny fails viral short\", 46,951,365 views, 5s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Funny Girl Fails Compilation",
+              "url": "https://www.youtube.com/shorts/xFRGJl3UhYI",
+              "creator": "FailArmy",
+              "publishedAt": "2024-10-11T22:19:27Z",
+              "viewCount": 9355752,
+              "likeCount": 80969,
+              "durationSeconds": 33,
+              "score": 100,
+              "sourceQuery": "funny fails viral short",
+              "recommendationReason": "Short relacionado con \"funny fails viral short\", 9,355,752 views, 33s"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "hook": "Este momento parece actuado, pero no: momentos donde todo parece normal y sale mal en 1 segundo.",
+          "clipBrief": "momentos donde todo parece normal y sale mal en 1 segundo; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "5-8",
+          "searchQueries": [
+            "instant regret viral short",
+            "instant regret this week",
+            "instant regret top moments",
+            "Fails viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=instant%20regret",
+            "https://www.youtube.com/results?search_query=instant%20regret%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=instant%20regret"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Instant Karma: Return to Sender? 🫨💣",
+              "url": "https://www.youtube.com/shorts/a_1nVKqF6ZE",
+              "creator": "Kreivas",
+              "publishedAt": "2025-02-22T08:00:03Z",
+              "viewCount": 624489031,
+              "likeCount": 9019507,
+              "durationSeconds": 10,
+              "score": 100,
+              "sourceQuery": "instant regret viral short",
+              "recommendationReason": "Short relacionado con \"instant regret viral short\", 624,489,031 views, 10s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Top 5 INSTANT REGRET😭 Moments💯 #shorts #funny",
+              "url": "https://www.youtube.com/shorts/6zbIgqCTcZE",
+              "creator": "SceneBay",
+              "publishedAt": "2025-06-14T00:30:05Z",
+              "viewCount": 68531,
+              "likeCount": 1218,
+              "durationSeconds": 42,
+              "score": 81,
+              "sourceQuery": "instant regret viral short",
+              "recommendationReason": "Short relacionado con \"instant regret viral short\", 68,531 views, 42s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Instant Regret- #fyp #funny #viral #relatable #youtubeshorts #ytshorts #short #shorts #shortvideo",
+              "url": "https://www.youtube.com/shorts/bvxjawgPcQ8",
+              "creator": "TheBoiKingg",
+              "publishedAt": "2024-02-01T04:20:20Z",
+              "viewCount": 5674,
+              "likeCount": 347,
+              "durationSeconds": 13,
+              "score": 70,
+              "sourceQuery": "instant regret viral short",
+              "recommendationReason": "Short relacionado con \"instant regret viral short\", 5,674 views, 13s"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "hook": "Aqui es donde todo cambia: momentos donde todo parece normal y sale mal en 1 segundo.",
+          "clipBrief": "momentos donde todo parece normal y sale mal en 1 segundo; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "5-8",
+          "searchQueries": [
+            "fails graciosos viral short",
+            "fails graciosos this week",
+            "fails graciosos top moments",
+            "Fails viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=fails%20graciosos",
+            "https://www.youtube.com/results?search_query=fails%20graciosos%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=fails%20graciosos"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "RANKING CAIDAS GRACIOSAS 😹  #humor #ranking",
+              "url": "https://www.youtube.com/shorts/jACUvBBpc70",
+              "creator": "Ene Rankings",
+              "publishedAt": "2025-06-22T21:53:08Z",
+              "viewCount": 23450140,
+              "likeCount": 167015,
+              "durationSeconds": 27,
+              "score": 100,
+              "sourceQuery": "fails graciosos viral short",
+              "recommendationReason": "Short relacionado con \"fails graciosos viral short\", 23,450,140 views, 27s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Caídas graciosas #2 #viral #shorts #borrachos #golpe #caidas #caidasgraciosas #comedia #hunor",
+              "url": "https://www.youtube.com/shorts/rLIBiv8Fk5w",
+              "creator": "Amanda La Rosa",
+              "publishedAt": "2022-12-13T14:13:41Z",
+              "viewCount": 4038927,
+              "likeCount": 56693,
+              "durationSeconds": 12,
+              "score": 100,
+              "sourceQuery": "fails graciosos viral short",
+              "recommendationReason": "Short relacionado con \"fails graciosos viral short\", 4,038,927 views, 12s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Salto mortal en un tobogán 😂😱 (via @highdiverfly) #shorts",
+              "url": "https://www.youtube.com/shorts/JRsStOy9GXI",
+              "creator": "ESPN Deportes",
+              "publishedAt": "2023-04-21T17:45:00Z",
+              "viewCount": 1773780,
+              "likeCount": 29655,
+              "durationSeconds": 22,
+              "score": 100,
+              "sourceQuery": "fails graciosos viral short",
+              "recommendationReason": "Short relacionado con \"fails graciosos viral short\", 1,773,780 views, 22s"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "hook": "Este es el tipo de clip que retiene: momentos donde todo parece normal y sale mal en 1 segundo.",
+          "clipBrief": "momentos donde todo parece normal y sale mal en 1 segundo; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "5-8",
+          "searchQueries": [
+            "unexpected fails viral short",
+            "unexpected fails this week",
+            "unexpected fails top moments",
+            "Fails viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=unexpected%20fails",
+            "https://www.youtube.com/results?search_query=unexpected%20fails%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=unexpected%20fails"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Ranking Top 5 FALLING Moments 😂 #funny #fails",
+              "url": "https://www.youtube.com/shorts/XulN4FZCqJ4",
+              "creator": "TopOfficial",
+              "publishedAt": "2025-05-09T06:38:11Z",
+              "viewCount": 9594887,
+              "likeCount": 88234,
+              "durationSeconds": 31,
+              "score": 100,
+              "sourceQuery": "unexpected fails viral short",
+              "recommendationReason": "Short relacionado con \"unexpected fails viral short\", 9,594,887 views, 31s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "WILD Broken Chair Prank! 🤯 #shorts",
+              "url": "https://www.youtube.com/shorts/qiXMm-nP6bs",
+              "creator": "ZutiGang",
+              "publishedAt": "2022-02-17T13:10:00Z",
+              "viewCount": 336319306,
+              "likeCount": 10679275,
+              "durationSeconds": 12,
+              "score": 100,
+              "sourceQuery": "unexpected fails viral short",
+              "recommendationReason": "Short relacionado con \"unexpected fails viral short\", 336,319,306 views, 12s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Funny Girl Fails Compilation",
+              "url": "https://www.youtube.com/shorts/xFRGJl3UhYI",
+              "creator": "FailArmy",
+              "publishedAt": "2024-10-11T22:19:27Z",
+              "viewCount": 9355752,
+              "likeCount": 80969,
+              "durationSeconds": 33,
+              "score": 100,
+              "sourceQuery": "unexpected fails viral short",
+              "recommendationReason": "Short relacionado con \"unexpected fails viral short\", 9,355,752 views, 33s"
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "hook": "Este tenia que entrar al top: momentos donde todo parece normal y sale mal en 1 segundo.",
+          "clipBrief": "momentos donde todo parece normal y sale mal en 1 segundo; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "4-7",
+          "searchQueries": [
+            "funny fails viral short",
+            "funny fails this week",
+            "funny fails top moments",
+            "Fails viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=funny%20fails",
+            "https://www.youtube.com/results?search_query=funny%20fails%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=funny%20fails"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Update: he can't 🤣 #afv #fail #funny #shorts",
+              "url": "https://www.youtube.com/shorts/s0e24Oak93o",
+              "creator": "America's Funniest Home Videos",
+              "publishedAt": "2025-06-14T20:00:28Z",
+              "viewCount": 2470729,
+              "likeCount": 20417,
+              "durationSeconds": 10,
+              "score": 100,
+              "sourceQuery": "funny fails viral short",
+              "recommendationReason": "Short relacionado con \"funny fails viral short\", 2,470,729 views, 10s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Legend says, she still hangin' there #funny #fail #gymnastics #AFV",
+              "url": "https://www.youtube.com/shorts/PqVg_u7VUwA",
+              "creator": "America's Funniest Home Videos",
+              "publishedAt": "2023-08-05T00:00:16Z",
+              "viewCount": 46951365,
+              "likeCount": 271504,
+              "durationSeconds": 5,
+              "score": 100,
+              "sourceQuery": "funny fails viral short",
+              "recommendationReason": "Short relacionado con \"funny fails viral short\", 46,951,365 views, 5s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "I’m getting dizzy just watching this!! 🤣 #fail #fall #funny #afv",
+              "url": "https://www.youtube.com/shorts/kkM_2z6nXzA",
+              "creator": "America's Funniest Home Videos",
+              "publishedAt": "2023-04-25T15:00:28Z",
+              "viewCount": 35934220,
+              "likeCount": 232024,
+              "durationSeconds": 6,
+              "score": 100,
+              "sourceQuery": "funny fails viral short",
+              "recommendationReason": "Short relacionado con \"funny fails viral short\", 35,934,220 views, 6s"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "hook": "El remate de este clip es perfecto: momentos donde todo parece normal y sale mal en 1 segundo.",
+          "clipBrief": "momentos donde todo parece normal y sale mal en 1 segundo; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "4-7",
+          "searchQueries": [
+            "instant regret viral short",
+            "instant regret this week",
+            "instant regret top moments",
+            "Fails viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=instant%20regret",
+            "https://www.youtube.com/results?search_query=instant%20regret%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=instant%20regret"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "Top 5 INSTANT REGRET😭 Moments💯 #shorts #funny",
+              "url": "https://www.youtube.com/shorts/6zbIgqCTcZE",
+              "creator": "SceneBay",
+              "publishedAt": "2025-06-14T00:30:05Z",
+              "viewCount": 68531,
+              "likeCount": 1218,
+              "durationSeconds": 42,
+              "score": 81,
+              "sourceQuery": "instant regret viral short",
+              "recommendationReason": "Short relacionado con \"instant regret viral short\", 68,531 views, 42s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Instant regret 😿 #short #viral  #trollface  #funny",
+              "url": "https://www.youtube.com/shorts/8ucP1LpS5fM",
+              "creator": "Zoïds_Troll",
+              "publishedAt": "2025-05-29T19:32:01Z",
+              "viewCount": 34036,
+              "durationSeconds": 13,
+              "score": 66,
+              "sourceQuery": "instant regret viral short",
+              "recommendationReason": "Short relacionado con \"instant regret viral short\", 34,036 views, 13s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Instant Regret Fails 😂😆🤣 #shorts #fails",
+              "url": "https://www.youtube.com/shorts/x-FfQlt26d8",
+              "creator": "Fun chilll ",
+              "publishedAt": "2024-11-01T13:30:36Z",
+              "viewCount": 20289,
+              "durationSeconds": 27,
+              "score": 64,
+              "sourceQuery": "instant regret viral short",
+              "recommendationReason": "Short relacionado con \"instant regret viral short\", 20,289 views, 27s"
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "hook": "Este momento parece actuado, pero no: momentos donde todo parece normal y sale mal en 1 segundo.",
+          "clipBrief": "momentos donde todo parece normal y sale mal en 1 segundo; buscar un clip con remate claro antes del segundo 3.",
+          "idealDurationSeconds": "4-7",
+          "searchQueries": [
+            "fails graciosos viral short",
+            "fails graciosos this week",
+            "fails graciosos top moments",
+            "Fails viral clips shorts"
+          ],
+          "searchUrls": [
+            "https://www.tiktok.com/search?q=fails%20graciosos",
+            "https://www.youtube.com/results?search_query=fails%20graciosos%20shorts",
+            "https://www.instagram.com/explore/search/keyword/?q=fails%20graciosos"
+          ],
+          "platforms": [
+            "TikTok",
+            "YouTube Shorts",
+            "Instagram Reels"
+          ],
+          "selectionNotes": [
+            "Priorizar clips verticales 9:16 o faciles de recortar.",
+            "Evitar clips con lesiones, humillacion fuerte o contexto confuso.",
+            "Guardar URL, creador y plataforma junto al archivo descargado."
+          ],
+          "resolvedClips": [
+            {
+              "platform": "YouTube Shorts",
+              "title": "RANKING CAIDAS GRACIOSAS 😹  #humor #ranking",
+              "url": "https://www.youtube.com/shorts/jACUvBBpc70",
+              "creator": "Ene Rankings",
+              "publishedAt": "2025-06-22T21:53:08Z",
+              "viewCount": 23450140,
+              "likeCount": 167015,
+              "durationSeconds": 27,
+              "score": 100,
+              "sourceQuery": "fails graciosos viral short",
+              "recommendationReason": "Short relacionado con \"fails graciosos viral short\", 23,450,140 views, 27s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Caídas graciosas #2 #viral #shorts #borrachos #golpe #caidas #caidasgraciosas #comedia #hunor",
+              "url": "https://www.youtube.com/shorts/rLIBiv8Fk5w",
+              "creator": "Amanda La Rosa",
+              "publishedAt": "2022-12-13T14:13:41Z",
+              "viewCount": 4038927,
+              "likeCount": 56693,
+              "durationSeconds": 12,
+              "score": 100,
+              "sourceQuery": "fails graciosos viral short",
+              "recommendationReason": "Short relacionado con \"fails graciosos viral short\", 4,038,927 views, 12s"
+            },
+            {
+              "platform": "YouTube Shorts",
+              "title": "Salto mortal en un tobogán 😂😱 (via @highdiverfly) #shorts",
+              "url": "https://www.youtube.com/shorts/JRsStOy9GXI",
+              "creator": "ESPN Deportes",
+              "publishedAt": "2023-04-21T17:45:00Z",
+              "viewCount": 1773780,
+              "likeCount": 29655,
+              "durationSeconds": 22,
+              "score": 100,
+              "sourceQuery": "fails graciosos viral short",
+              "recommendationReason": "Short relacionado con \"fails graciosos viral short\", 1,773,780 views, 22s"
+            }
+          ]
+        }
+      ],
+      "hashtags": [
+        "#Shorts",
+        "#Top5",
+        "#Viral",
+        "#fails"
+      ],
+      "trendSignals": []
+    }
+  ],
+  "sourceStatus": "fallback:offline topic rotation",
+  "clipSourceStatus": "youtube:94 specific clip candidates",
+  "sourceSignals": [],
+  "workflow": [
+    "Revisar las 2 propuestas con mayor score.",
+    "Abrir las busquedas sugeridas y escoger clips con permiso, licencia o uso aprobado.",
+    "Descargar manualmente los 5 clips finales por propuesta.",
+    "Guardar los archivos en assets/approved_clips/<slug-del-top>/.",
+    "Registrar creador y URL fuente antes de ensamblar el Short."
+  ]
+}
